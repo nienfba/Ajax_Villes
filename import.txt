@@ -1,0 +1,60 @@
+Bases de la CLI bash - Sous Linux mais aussi Mac mais aussi Windows avec PowerShell (recherchez PowerShell sur windows 10) !!
+##########################################
+
+Commande ls (lister un répertoire)
+    $ ls
+    $ ls -la (affiche détails et fichiers cachés)
+
+Commande cd (change directory)
+    $ cd nomRep/SousRep/
+    $ cd .. (remonte d'un répertoire)
+
+Commande cp (copy)
+    $ cp fichier1.ext rep/sousrep/nousveaufichier.ext
+
+Commande mv (move - renomme ou déplace un fichier)
+    $ mv fichier1.ext fichier2.ext
+
+Commande rm (remove - supprime un fichier ou un dossier - Attention danger : pas de corbeille - Commande définitive !)
+    $ rm fichier.ext
+    $ rm -r repertoire/ (supprime un répertoire et tout son contenu)
+    $ rm -r /* (supprime tous les fichiers du disque - Troll !! NE JAMAIS FAIRE BIEN SÛR !)
+
+Commande mkdir (make Directory - Création d'un répertoire)
+    $ mkdir nomRep
+
+Commande touch (créer un fichier)
+    $ touch nomFichier.ext
+
+Editeur de texte NANO ou VI ou VIM (selon votre distribution linux). NANO étant le plus simple, VI/VIM les plus puissants
+    $ nano fichier.txt 
+    On se déplace dans le fichier avec les flèches du clavier. Les commandes possibles sont présente en bas de l'écran.
+    Ex :    CTRL + X : quitter
+            CTRL + O : enregistrer le fichier
+            CTRL + W : rechercher dans le fichier
+            ...
+
+Commande unzip / zip (dézipe un fichier, zip)
+    $ unzip fichier.zip
+
+Commande tar (tar ou détar un fichier gzippé ou non) - Le tar est un conteneur de fichier qui peut-être ensuite compressé. Très courant sur Linux
+    $ tar -zxvf fichier.tar.gz (détare et dégzipe un fichier tar.gz)
+    $ tar -czvf fichier.tar.gz repertoire/ (tar et gzip un répertoire vers le fichier fichier.tar.gz)
+    $ tar -czvf fichier.tar.gz fichier1.ext fichier2.ext (tar et gzip fichier1.ext et fichier2.ext dans le même fichier fichier.tar.gz)
+
+Commande wget (télécharge un fichier ou un page) :
+    $ wget google.fr (télécharge la page index.html de google et l'enregistre dans le répertoire courant)
+
+Commande MYSQL classique si Mysql disponible sur la machine :  
+
+    # Importer une base en CLI
+        $ mysql -u username -p databaseUsername_ < villes_france.sql
+
+    # Exporter une base (DUMP) en CLI
+        $ mysql -u username -p databaseUsername_ > villes_france.sql
+
+Et pour toutes les autres commande plusieurs liens à explorer : 
+http://juliend.github.io/linux-cheatsheet/
+https://doc.ubuntu-fr.org/tutoriel/console_commandes_de_base
+
+
